@@ -15,8 +15,9 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
                6 Plus Heading
   Multilines:  1 Intro (greeting + paragraphs) 2 Report Button 3 Findings 4 Inside List 5 Interactive Text
                6 Interactive Button 7 Plus Text 8 Plus Button 9 Sign-off
-  Images:      1 Hero (Href = report) 2 Chart (no link) 3 Interactive Still (Href = interactive)
-  Static: logo, mountain illustration, footer with the Reference Price definition, unsubscribe.
+  Images:      1 Chart (no link) 2 Interactive Still (Href = interactive)
+  Static: logo, hero (static so its alt text keeps the en dash: CM escapes entities in an editable image's Alt; its link
+          carries the hero UTM tags and is checked by build.mjs), mountain illustration, footer with the Reference Price definition, unsubscribe.
   Five links: hero image, report button, interactive image, interactive button, plus button. No footer link.
 -->
 <!--[if !mso]><!--><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Mulish:wght@400;700&display=swap" rel="stylesheet"><!--<![endif]-->
@@ -67,7 +68,7 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
   <!-- hero: the report cover -->
   <tr>
     <td bgcolor="#ffffff" style="padding:0; font-size:0; line-height:0; background-color:#ffffff;">
-      <img editable="true" label="Hero" class="full-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/report-launch-hero-v2.jpg" alt="Report cover" width="700" style="display:block; width:100%; max-width:700px; height:auto; border:0;">
+      <a href="https://snowonly.com/pages/french-ski-property-report?utm_medium=email&amp;utm_source=newsletter&amp;utm_campaign=2026-11-18&amp;utm_content=hero#get-report"><img class="full-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/report-launch-hero-spread-v2.jpg" alt="The SnowOnly French Ski Property Report, Winter 2026&ndash;27: the cover with pages on prices, resorts and buying costs" width="700" style="display:block; width:100%; max-width:700px; height:auto; border:0;"></a>
     </td>
   </tr>
 
