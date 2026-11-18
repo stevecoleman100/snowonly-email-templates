@@ -8,7 +8,7 @@
 <title>SnowOnly weekly</title>
 <!-- SnowOnly weekly newsletter template. Process: ../PLAYBOOK.md. Design: writing/memory/newsletter-design.md.
 POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; change this list with the HTML)
-  Singlelines: 1 Preview Text
+  Singlelines: 1 Preview Text 2 Footer Link (Href)
   Multilines:  1 Story Intro (greeting + two short paragraphs)  2 Story Button
   Images:      1 Story Image (Href = story link)
   Repeaters:   1 Properties, layouts:
@@ -17,7 +17,7 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
                  Pair: two cards side by side, headline and fact lines only (no description): Images 1 Photo L 2 Photo R | Singlelines 1 Location L 2 Headline L 3 Location R 4 Headline R | Multilines 1 Facts L 2 Button L 3 Facts R 4 Button R. Headline two lines at most; Facts four short lines joined with <br>.
                2 More (in order: an optional Extra, then one secondary block, alternating Guide and Developer):
                  Extra: Images 1 Image | Singlelines 1 Heading | Multilines 1 Text 2 Button
-                 Guide: Multilines 1 Button (text and image fixed)
+                 Guide: Images 1 Guide Image (Href) | Multilines 1 Button (heading and text fixed)
                  Developer: Images 1 Image | Singlelines 1 Heading | Multilines 1 Text 2 Button
   Static: logo, "This week's properties" heading, mountain illustration, footer with the Reference Price definition, unsubscribe.
 -->
@@ -32,6 +32,7 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
   p { margin:0 0 14px 0; }
   .ph a { color:#16314C !important; text-decoration:none !important; }
   .eh a { color:#16314C !important; text-decoration:none !important; }
+  .fl a { color:#000000 !important; text-decoration:underline !important; }
   @media only screen and (max-width:720px) {
     .sp { padding-left:24px !important; padding-right:24px !important; }
     .stack { display:block !important; width:100% !important; }
@@ -231,14 +232,12 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td class="stack" width="220" valign="middle" style="width:220px; font-size:0; line-height:0;">
-                    <a href="https://snowonly.com/pages/france-property-5-steps"><img class="stack-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/weekly-5step.jpg" alt="The 5 Steps to Simplifying your Ski Property Purchase, SnowOnly's free guide" width="220" style="display:block; width:220px; max-width:220px; height:auto; border:0;"></a>
+                    <img editable="true" label="Guide Image" class="stack-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/weekly-5step.jpg" alt="The 5 Steps to Simplifying your Ski Property Purchase, SnowOnly's free guide" width="220" style="display:block; width:220px; max-width:220px; height:auto; border:0;">
                   </td>
                   <td class="stack-gap" width="24" style="width:24px; font-size:0; line-height:0;">&nbsp;</td>
                   <td class="stack" valign="middle" style="font-family:Mulish,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:25px; color:#333333;">
-                    <div class="serif" style="font-family:Fraunces,Georgia,'Times New Roman',serif; font-size:20px; line-height:27px; font-weight:600; color:#16314C;">The 5 steps to buying a French ski property</div>
-                    <div style="height:10px; line-height:10px;">&nbsp;</div>
-                    Our free guide walks through each stage: choosing the property, the mortgage, the currency, the notaire, and protecting it for your family.
-                    <div style="height:16px; line-height:16px;">&nbsp;</div>
+                    <div class="serif" style="font-family:Fraunces,Georgia,'Times New Roman',serif; font-size:20px; line-height:27px; font-weight:600; color:#16314C; margin:0 0 10px 0;">The 5 steps to buying a French ski property</div>
+                    <p style="margin:0 0 16px 0;">Our free guide walks through each stage: choosing the property, the mortgage, the currency, the notaire, and protecting it for your family.</p>
                     <multiline label="Button"><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td bgcolor="#16314C" style="background-color:#16314C; border-radius:4px; padding:12px 24px; mso-padding-alt:12px 24px;"><a href="https://snowonly.com/pages/france-property-5-steps" style="color:#ffffff; font-family:Mulish,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; font-weight:bold; line-height:24px; text-decoration:none; display:inline-block;">Download the guide</a></td></tr></table></multiline>
                   </td>
                 </tr>
@@ -291,12 +290,10 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
   <tr>
     <td class="sp" bgcolor="#e9e9e9" style="background-color:#e9e9e9; padding:10px 40px 30px 40px; font-family:Mulish,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; color:#3d4651;">
       <img cm_dontimportimage src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/logo-blue-transparent-bg.png" alt="SnowOnly" width="120" style="display:block; width:120px; height:auto; border:0; margin-bottom:14px;">
-      SnowOnly Reference Price: the price per m&sup2; at which the top 10% of a resort's completed sales begin, from DVF, France's official sales register.
-      <div style="height:14px; line-height:14px;">&nbsp;</div>
-      Specialist ski property, France&nbsp;&nbsp;&bull;&nbsp;  Switzerland&nbsp;&nbsp;&bull;&nbsp;  Austria&nbsp;&nbsp;&bull;&nbsp;  Italy&nbsp;&nbsp;&bull;&nbsp;  Japan
-      <div style="height:14px; line-height:14px;">&nbsp;</div>
-      &copy; SnowOnly Ltd 2026<br><br>
-      <a href="https://snowonly.com" style="color:#000000; text-decoration:underline;">SnowOnly.com</a>
+      <p style="margin:0 0 14px 0;">SnowOnly Reference Price: the price per m&sup2; at which the top 10% of a resort's completed sales begin, from DVF, France's official sales register.</p>
+      <p style="margin:0 0 14px 0;">Specialist ski property, France&nbsp;&nbsp;&bull;&nbsp;  Switzerland&nbsp;&nbsp;&bull;&nbsp;  Austria&nbsp;&nbsp;&bull;&nbsp;  Italy&nbsp;&nbsp;&bull;&nbsp;  Japan</p>
+      <p style="margin:0 0 24px 0;">&copy; SnowOnly Ltd 2026</p>
+      <span class="fl" style="color:#000000; text-decoration:underline;"><singleline label="Footer Link">SnowOnly.com</singleline></span>
       &nbsp;&nbsp;&bull;&nbsp; 
       <unsubscribe style="color:#000000; text-decoration:underline;">Unsubscribe</unsubscribe>
     </td>
