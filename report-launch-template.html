@@ -13,9 +13,10 @@ template (social/newsletter/template/weekly.html): same header, footer, fonts an
 POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; change this list with the HTML)
   Singlelines: 1 Preview Text 2 Headline (above the hero) 3 Findings Heading 4 Inside Heading 5 Interactive Heading
                6 Plus Heading
-  Multilines:  1 Intro (greeting + paragraphs) 2 Report Button 3 Findings 4 Inside List 5 Interactive Text
-               6 Interactive Button 7 Plus Text 8 Plus Button 9 Sign-off
-  Images:      1 Chart (no link) 2 Interactive Still (Href = interactive)
+  Multilines:  1 Intro (greeting + paragraphs) 2 Report Button 3 Finding 1 4 Finding 2 5 Finding 3 6 Inside List
+               7 Interactive Text 8 Interactive Button 9 Plus Text 10 Plus Button 11 Sign-off
+  Images:      1-3 Finding 1-3 Chart (no link; each sits beside its finding, stacked above it on a phone)
+               4 Interactive Still (Href = interactive)
   Static: logo, hero (static so its alt text keeps the en dash: CM escapes entities in an editable image's Alt; its link
           carries the hero UTM tags and is checked by build.mjs), mountain illustration, footer with the Reference Price definition, unsubscribe.
   Five links: hero image, report button, interactive image, interactive button, plus button. No footer link.
@@ -34,6 +35,8 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
     .sp { padding-left:24px !important; padding-right:24px !important; }
     .full-img { width:100% !important; max-width:100% !important; height:auto !important; }
     .headline { font-size:22px !important; line-height:30px !important; }
+    .col { max-width:100% !important; }
+    .colpad { padding:14px 0 0 0 !important; }
   }
 </style>
 </head>
@@ -96,13 +99,48 @@ POSITIONAL FIELD CONTRACT (Campaign Monitor fills tags by position, not label; c
     </td>
   </tr>
   <tr>
-    <td class="sp" bgcolor="#F4F4F4" style="background-color:#F4F4F4; padding:0 40px; font-size:0; line-height:0;">
-      <img editable="true" label="Chart" class="full-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/report-launch-chart-v2.png" alt="Chart" width="620" style="display:block; width:100%; max-width:620px; height:auto; border:0; border-radius:6px;">
+    <td class="sp" bgcolor="#F4F4F4" style="background-color:#F4F4F4; padding:4px 40px 26px 40px; font-size:0; line-height:0; text-align:left;">
+      <!--[if mso]><table role="presentation" width="620" cellpadding="0" cellspacing="0" border="0"><tr><td width="270" valign="top"><![endif]-->
+      <div class="col" style="display:inline-block; width:100%; max-width:270px; vertical-align:top;">
+        <img editable="true" label="Finding 1 Chart" class="full-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/report-launch-finding-1.jpg" alt="Chart" width="270" style="display:block; width:100%; max-width:270px; height:auto; border:0;">
+      </div>
+      <!--[if mso]></td><td width="350" valign="top"><![endif]-->
+      <div class="col" style="display:inline-block; width:100%; max-width:350px; vertical-align:top;">
+        <div class="colpad" style="padding:6px 0 0 22px; font-family:Mulish,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:26px; color:#333333; text-align:left;">
+          <multiline label="Finding 1"><p style="margin:0 0 14px 0;">Finding.</p></multiline>
+        </div>
+      </div>
+      <!--[if mso]></td></tr></table><![endif]-->
     </td>
   </tr>
   <tr>
-    <td class="sp" bgcolor="#F4F4F4" style="background-color:#F4F4F4; padding:24px 40px 22px 40px; font-family:Mulish,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:26px; color:#333333;">
-      <multiline label="Findings"><p style="margin:0 0 14px 0;">Findings.</p></multiline>
+    <td class="sp" bgcolor="#F4F4F4" style="background-color:#F4F4F4; padding:4px 40px 26px 40px; font-size:0; line-height:0; text-align:left;">
+      <!--[if mso]><table role="presentation" width="620" cellpadding="0" cellspacing="0" border="0"><tr><td width="270" valign="top"><![endif]-->
+      <div class="col" style="display:inline-block; width:100%; max-width:270px; vertical-align:top;">
+        <img editable="true" label="Finding 2 Chart" class="full-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/report-launch-finding-2.jpg" alt="Chart" width="270" style="display:block; width:100%; max-width:270px; height:auto; border:0;">
+      </div>
+      <!--[if mso]></td><td width="350" valign="top"><![endif]-->
+      <div class="col" style="display:inline-block; width:100%; max-width:350px; vertical-align:top;">
+        <div class="colpad" style="padding:6px 0 0 22px; font-family:Mulish,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:26px; color:#333333; text-align:left;">
+          <multiline label="Finding 2"><p style="margin:0 0 14px 0;">Finding.</p></multiline>
+        </div>
+      </div>
+      <!--[if mso]></td></tr></table><![endif]-->
+    </td>
+  </tr>
+  <tr>
+    <td class="sp" bgcolor="#F4F4F4" style="background-color:#F4F4F4; padding:4px 40px 34px 40px; font-size:0; line-height:0; text-align:left;">
+      <!--[if mso]><table role="presentation" width="620" cellpadding="0" cellspacing="0" border="0"><tr><td width="270" valign="top"><![endif]-->
+      <div class="col" style="display:inline-block; width:100%; max-width:270px; vertical-align:top;">
+        <img editable="true" label="Finding 3 Chart" class="full-img" src="https://raw.githubusercontent.com/stevecoleman100/snowonly-email-templates/main/images/report-launch-finding-3.jpg" alt="Chart" width="270" style="display:block; width:100%; max-width:270px; height:auto; border:0;">
+      </div>
+      <!--[if mso]></td><td width="350" valign="top"><![endif]-->
+      <div class="col" style="display:inline-block; width:100%; max-width:350px; vertical-align:top;">
+        <div class="colpad" style="padding:6px 0 0 22px; font-family:Mulish,'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:16px; line-height:26px; color:#333333; text-align:left;">
+          <multiline label="Finding 3"><p style="margin:0 0 14px 0;">Finding.</p></multiline>
+        </div>
+      </div>
+      <!--[if mso]></td></tr></table><![endif]-->
     </td>
   </tr>
 
